@@ -38,12 +38,29 @@ public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad)
     $existe= false;
     foreach($hamburguesas as &$hamburguesa)
     {
-        if ($hamburguesa['nombre'] == $nombre && $hamburguesa['tipo'] == $tipo) {
+        /*if ($hamburguesa['nombre'] == $nombre && $hamburguesa['tipo'] == $tipo) {
             $hamburguesa['precio'] = $precio;
             $hamburguesa['cantidad'] += $cantidad;
             $existe = true;
             break;
-        }
+        }*/
+       /*if(Busqueda::BuscaCaracteristica('nombre',$nombre,$hamburguesa) &&
+           Busqueda::BuscaCaracteristica('tipo',$tipo,$hamburguesa))
+           {
+            $hamburguesa['precio'] = $precio;
+            $hamburguesa['cantidad'] += $cantidad;
+            $existe = true;
+            break;
+           }*/
+           if(Busqueda::BuscarObjetoEnArray('nombre',$nombre,$hamburguesas) &&
+           Busqueda::BuscarObjetoEnArray('tipo',$tipo,$hamburguesas))
+           {
+            $hamburguesa['precio'] = $precio;
+            $hamburguesa['cantidad'] += $cantidad;
+            $existe = true;
+            break;
+           }
+
     }
 
     if(!$existe)
@@ -57,8 +74,9 @@ public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad)
         'cantidad' => $cantidad
         );     
     array_push($hamburguesas,$nuevaHamburguesa);
-}
-Archivos_Json::GuardarArrayJson($hamburguesas);
+    }
+    Archivos_Json::GuardarArrayJson($hamburguesas);
+    echo "LLEGUE A LA ULTIMA LINEA";
 
 }
 

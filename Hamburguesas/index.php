@@ -1,10 +1,27 @@
 <?php
 
 switch($_SERVER['REQUEST_METHOD']){
+   
     case "GET":
-        // require_once "PizzaConsultar.php";
+       
         break;
     case "POST":
-        require_once "HamburguesaCarga.php";
+        $accion = $_POST['accion'];
+        switch ($accion) {
+            case 'HamburguesaCarga':
+
+                require_once 'HamburguesaCarga.php';
+                break;
+
+            case 'HamburguesaConsultar':
+
+                require_once 'HamburguesaConsultar.php';
+                break;
+
+            default:
+
+                echo "La acción que se menciona no es valida";
+                break;
+        }
         break;
 }

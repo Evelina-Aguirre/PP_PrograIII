@@ -1,92 +1,76 @@
 <?php
 include_once '_Json.php';
 
-class Busqueda{
+class Busqueda
+{
 
-    public static function inicializarBusqueda(){
+    public static function inicializarBusqueda()
+    {
         $instancia = new self();
     }
 
-    //informa si existe o no una carac. en un objeto devuelve true, false
-public static function BuscaCaracteristica($nombProp,$caracteristica)
-{
-    foreach(Archivos_Json::$_arrayObj as $obj)    
+
+    //informa si un objeto con determinada característica en un array
+    public static function BuscarObjetoEnArray($nombProp, $caracteristica, $array)
     {
-       if(strtolower($obj->$nombProp) == strtolower($caracteristica))
-       {
-           return true; 
-       }
+        foreach ($array as $objebArray) {
+            if (self::BuscaCaracteristica($nombProp, $caracteristica, $objebArray)) {
+                return true;
+            }
+        }
+        return false;
     }
-    return false;
-}
-//******************************************************************************** */
-//informa dos objetos son iguales teniendo en cuenta dos propiedades del mismo (true/false)
-public static function Equals($nombProp1,$caract1,$nombProp2,$caract2)
-{
-    foreach(Archivos_Json::$_arrayObj as $obj)
+    //informa si existe o no una carac. en un objeto particular
+    public static function BuscaCaracteristica($nombProp, $caracteristica, $obj)
     {
-        if($obj->sabor == strtolower($caract1) && $obj->tipo == strtolower($caract2))
-        {
+        foreach ($obj as $clave => $valor) {
+
+            if (strtolower($clave) == strtolower($nombProp)) {
+
+                if ($valor == $caracteristica) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+    //////////////////////////////////NO USO///////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //si los objetos son iguales de acuerdo a dos carácterísticas, actualiza en precio (true/false)
+    public static function ActualizarPrecio($nombProp1, $caract1, $nombProp2, $caract2, $precioNuevo)
+    {
+        $indiceEncontrado = null;
+        if (self::InformaIndiceObjeto($nombProp1, $caract1, $nombProp2, $caract2) != null) {
+            $indiceEncontrado = self::InformaIndiceObjeto($nombProp1, $caract1, $nombProp2, $caract2);
+            Archivos_Json::$_arrayObj[$indiceEncontrado]->_precio = $precioNuevo; //falta guardar********************
             return true;
         }
+        return false;
     }
-    return false;
-}
-//******************************************************************************** */
 
-//Retorna el INDICE del objeto encontrado si se encontró ser igual que otro
-public static function InformaIndiceObjeto($nombProp1,$caract1,$nombProp2,$caract2)
-{
-    foreach(Archivos_Json::$_arrayObj as $indice =>$obj)
+    //si los objetos son iguales deacuerdo a dos carácterísticas, suma la cantidad (true/false)
+    public static function ActualizarCantidad($nombProp1, $caract1, $nombProp2, $caract2, $cantidad)
     {
-        if(self::Equals($nombProp1,$caract1,$nombProp2,$caract2))
-        { 
-           return $indice;
+        $indiceEncontrado = null;
+        if (self::InformaIndiceObjeto($nombProp1, $caract1, $nombProp2, $caract2) != null) {
+            $indiceEncontrado = self::InformaIndiceObjeto($nombProp1, $caract1, $nombProp2, $caract2);
+            Archivos_Json::$_arrayObj[$indiceEncontrado]->_cantidad += $cantidad; //****************************guardar  */
+            return true;
         }
+        return false;
     }
-    return Null;
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////NO USO///////////////////////////////////////////////////////////////////////////////////////////////////
-
-//si los objetos son iguales de acuerdo a dos carácterísticas, actualiza en precio (true/false)
-public static function ActualizarPrecio($nombProp1,$caract1,$nombProp2,$caract2,$precioNuevo)
-{
-    $indiceEncontrado=null;
-    if(self::InformaIndiceObjeto($nombProp1,$caract1,$nombProp2,$caract2) != null)
+    //Retorna el INDICE del objeto encontrado si se encontró ser igual que otro
+    public static function InformaIndiceObjeto($nombProp1, $caract1, $nombProp2, $caract2)
     {
-        $indiceEncontrado=self::InformaIndiceObjeto($nombProp1,$caract1,$nombProp2,$caract2);
-        Archivos_Json::$_arrayObj[$indiceEncontrado]->_precio=$precioNuevo;//falta guardar********************
-        return true;
+        foreach (Archivos_Json::$_arrayObj as $indice => $obj) {
+            if (self::Equals($nombProp1, $caract1, $nombProp2, $caract2)) {
+                return $indice;
+            }
+        }
+        return Null;
     }
-    return false;
-
 }
-
-//si los objetos son iguales deacuerdo a dos carácterísticas, suma la cantidad (true/false)
-public static function ActualizarCantidad($nombProp1,$caract1,$nombProp2,$caract2,$cantidad)
-{
-    $indiceEncontrado=null;
-    if(self::InformaIndiceObjeto($nombProp1,$caract1,$nombProp2,$caract2) != null)
-    {
-        $indiceEncontrado=self::InformaIndiceObjeto($nombProp1,$caract1,$nombProp2,$caract2);
-        Archivos_Json::$_arrayObj[$indiceEncontrado]->_cantidad+=$cantidad;//****************************guardar  */
-        return true;
-    }
-    return false;
-}
-
-}
-?>
