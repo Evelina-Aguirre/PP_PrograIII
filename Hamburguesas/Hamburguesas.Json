@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "nombre": "Hamb1",
+        "precio": "3500",
+        "tipo": "simple",
+        "aderezo": "mayonesa",
+        "cantidad": 4
+    },
+    {
+        "id": 2,
+        "nombre": "Hamb2",
+        "precio": "2450",
+        "tipo": "doble",
+        "aderezo": "ketchup",
+        "cantidad": 28
+    },
+    {
+        "id": 3,
+        "nombre": "Hamb3",
+        "precio": "1500",
+        "tipo": "simple",
+        "aderezo": "mostaza",
+        "cantidad": 3
+    },
+    {
+        "id": 4,
+        "nombre": "Hamb4",
+        "precio": "1500",
+        "tipo": "simple",
+        "aderezo": "ketchup",
+        "cantidad": 3
+    }
+]
