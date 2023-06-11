@@ -1,0 +1,152 @@
+[
+    {
+        "idVenta": 1,
+        "numPedido": 101,
+        "fecha": "12-06-2023_00-18-30",
+        "email": "pepe@gmail.com",
+        "nombreCliente": "pepe",
+        "tipoPedido": "doble",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 2,
+        "numPedido": 102,
+        "fecha": "12-06-2023_01-20-47",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "20"
+    },
+    {
+        "idVenta": 3,
+        "numPedido": 103,
+        "fecha": "12-06-2023_01-21-44",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 4,
+        "numPedido": 104,
+        "fecha": "12-06-2023_01-21-48",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 5,
+        "numPedido": 105,
+        "fecha": "12-06-2023_01-22-06",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "5"
+    },
+    {
+        "idVenta": 6,
+        "numPedido": 106,
+        "fecha": "12-06-2023_01-26-35",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 7,
+        "numPedido": 107,
+        "fecha": "12-06-2023_01-28-45",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 8,
+        "numPedido": 108,
+        "fecha": "12-06-2023_01-28-50",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 9,
+        "numPedido": 109,
+        "fecha": "12-06-2023_01-35-31",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "3"
+    },
+    {
+        "idVenta": 10,
+        "numPedido": 110,
+        "fecha": "12-06-2023_01-36-33",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "3"
+    },
+    {
+        "idVenta": 11,
+        "numPedido": 111,
+        "fecha": "12-06-2023_01-37-57",
+        "email": "pepa@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 12,
+        "numPedido": 112,
+        "fecha": "12-06-2023_01-41-04",
+        "email": "marta@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 13,
+        "numPedido": 113,
+        "fecha": "12-06-2023_01-41-51",
+        "email": "marta@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 14,
+        "numPedido": 114,
+        "fecha": "12-06-2023_01-42-22",
+        "email": "marta@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    },
+    {
+        "idVenta": 15,
+        "numPedido": 115,
+        "fecha": "12-06-2023_01-42-48",
+        "email": "marta@gmail.com",
+        "nombreCliente": "pepa",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "1"
+    }
+]

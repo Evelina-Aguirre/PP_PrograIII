@@ -1,9 +1,9 @@
 <?php
 
-switch($_SERVER['REQUEST_METHOD']){
-   
+switch ($_SERVER['REQUEST_METHOD']) {
+
     case "GET":
-       
+
         break;
     case "POST":
         $accion = $_POST['accion'];
@@ -16,6 +16,10 @@ switch($_SERVER['REQUEST_METHOD']){
             case 'HamburguesaConsultar':
 
                 require_once 'HamburguesaConsultar.php';
+                break;
+            case 'AltaVenta':
+
+                require_once 'AltaVenta.php';
                 break;
 
             default:

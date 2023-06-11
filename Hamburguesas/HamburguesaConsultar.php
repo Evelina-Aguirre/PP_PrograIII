@@ -4,7 +4,7 @@ include_once 'Hamburguesa.php';
 $nombre= $_POST['nombre'];
 $tipo = $_POST['tipo'];
 
-$arrayHamburguesas=Archivos_Json::LeerJson();
+$arrayHamburguesas=Archivos_Json::LeerJson(Hamburguesa::archivo);
 
 $nombreExiste=Busqueda::BuscarObjetoEnArray('nombre',$nombre,$arrayHamburguesas);
 $tipoExiste=Busqueda::BuscarObjetoEnArray('tipo',$tipo,$arrayHamburguesas);

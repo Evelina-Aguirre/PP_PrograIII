@@ -13,26 +13,28 @@ class Hamburguesa{
     public $_tipo;
     public $_aderezo;
     public $_cantidad;
+    public $_imagen;
     
-    public $_directorioImagenes = "ImagenesDeHamburguesas/2023/";
+    const archivo = "Hamburguesas.Json";
     
-public function __construct($nombre="",$precio=0,$tipo="",$aderezo="",$cantidad=0)
+public function __construct($nombre="",$precio=0,$tipo="",$aderezo="",$cantidad=0,$imagen="")
 {
-     Archivos_Json::$_arrayObj=array();
-    $this->_id=count(Archivos_Json::$_arrayObj)+1;
+    // Archivos_Json::$_arrayObj=array();
+    $this->_id=count(Archivos_Json::LeerJson(Hamburguesa::archivo))+1;
     $this->_nombre=$nombre;
     $this->_precio=$precio;
     $this->_tipo=$tipo;
     $this->_aderezo=$aderezo;
     $this->_cantidad=$cantidad;
+    $this->_imagen=$imagen;
     
 }
 
 
-public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad)
+public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad,$imagen)
 {
     $hamburguesas=array();
-    $hamburguesas= Archivos_Json::LeerJson();
+    $hamburguesas= Archivos_Json::LeerJson(Hamburguesa::archivo);
     $id=count($hamburguesas)+1;
 
     $existe= false;
@@ -44,22 +46,16 @@ public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad)
             $existe = true;
             break;
         }*/
-       /*if(Busqueda::BuscaCaracteristica('nombre',$nombre,$hamburguesa) &&
+      if(Busqueda::BuscaCaracteristica('nombre',$nombre,$hamburguesa) &&
            Busqueda::BuscaCaracteristica('tipo',$tipo,$hamburguesa))
            {
             $hamburguesa['precio'] = $precio;
             $hamburguesa['cantidad'] += $cantidad;
             $existe = true;
-            break;
-           }*/
-           if(Busqueda::BuscarObjetoEnArray('nombre',$nombre,$hamburguesas) &&
-           Busqueda::BuscarObjetoEnArray('tipo',$tipo,$hamburguesas))
-           {
-            $hamburguesa['precio'] = $precio;
-            $hamburguesa['cantidad'] += $cantidad;
-            $existe = true;
+            echo "Se modifica una hamburguesa existente.</br>";
             break;
            }
+            
 
     }
 
@@ -71,12 +67,12 @@ public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad)
         'precio' => $precio,
         'tipo' => $tipo,
         'aderezo'=>$aderezo,
-        'cantidad' => $cantidad
+        'cantidad' => $cantidad,
+        'imagen' =>$imagen
         );     
     array_push($hamburguesas,$nuevaHamburguesa);
     }
-    Archivos_Json::GuardarArrayJson($hamburguesas);
-    echo "LLEGUE A LA ULTIMA LINEA";
+    Archivos_Json::GuardarArrayJson(Hamburguesa::archivo,$hamburguesas);
 
 }
 

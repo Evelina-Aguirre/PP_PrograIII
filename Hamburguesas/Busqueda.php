@@ -10,7 +10,7 @@ class Busqueda
     }
 
 
-    //informa si un objeto con determinada característica en un array
+    //Informa si el array posee algún objeto con la característica buscada
     public static function BuscarObjetoEnArray($nombProp, $caracteristica, $array)
     {
         foreach ($array as $objebArray) {
@@ -20,16 +20,12 @@ class Busqueda
         }
         return false;
     }
-    //informa si existe o no una carac. en un objeto particular
+    //informa si existe o no una carac. en un objeto 
     public static function BuscaCaracteristica($nombProp, $caracteristica, $obj)
     {
         foreach ($obj as $clave => $valor) {
-
-            if (strtolower($clave) == strtolower($nombProp)) {
-
-                if ($valor == $caracteristica) {
+            if (strtolower($clave) == strtolower($nombProp) && strtolower($valor) == strtolower($caracteristica)) {
                     return true;
-                }
             }
         }
 
@@ -62,6 +58,19 @@ class Busqueda
         }
         return false;
     }
+
+    //******************************************************************************** */
+    //informa dos objetos son iguales teniendo en cuenta dos propiedades del mismo (true/false)
+    public static function Equals($nombProp1, $caract1, $nombProp2, $caract2)
+    {
+        foreach (Archivos_Json::$_arrayObj as $obj) {
+            if ($obj->sabor == strtolower($caract1) && $obj->tipo == strtolower($caract2)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    //******************************************************************************** */
 
     //Retorna el INDICE del objeto encontrado si se encontró ser igual que otro
     public static function InformaIndiceObjeto($nombProp1, $caract1, $nombProp2, $caract2)

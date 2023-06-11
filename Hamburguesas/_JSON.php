@@ -1,24 +1,23 @@
 <?php
 class Archivos_Json{
 
-    public static $_arrayObj;
-    public static $_archivo = "Hamburguesas.Json";
+    //public static $_arrayObj;
 
-    public static function LeerJson() {
-        if (!file_exists(self::$_archivo)) {
-            file_put_contents(self::$_archivo, json_encode([]));
+    public static function LeerJson($archivo) {
+        if (!file_exists($archivo)) {
+            file_put_contents($archivo, json_encode([]));
         }
 
-        $contenido = file_get_contents(self::$_archivo);
-        self::$_arrayObj = json_decode($contenido, true);
-        self::$_arrayObj = self::$_arrayObj ? self::$_arrayObj : array();
-        return self::$_arrayObj;
+        $contenido = file_get_contents($archivo);
+        $array = json_decode($contenido, true);
+        $array = $array ? $array : array();
+        return $array;
     }
 
-    public static function GuardarArrayJson($array) {
+    public static function GuardarArrayJson($archivo, $array) {
         $contenido = json_encode($array, JSON_PRETTY_PRINT);
-        file_put_contents(self::$_archivo, $contenido);
-        self::$_arrayObj = $contenido;
+        file_put_contents($archivo, $contenido);
+        //self::$_arrayObj = $contenido;
     }
 
     /*public static function GuardarArrayJson($array) {
