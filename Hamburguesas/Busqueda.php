@@ -104,4 +104,20 @@ class Busqueda
 
         return $ventasEntreFechas;
     }
+
+
+    //Ejemplo  Public static function ObtenerIndice('numPedido', '101', leerJson(archivo))
+    Public static function ObtenerIndice($nomPropiedad, $caracteristica, $array)
+    {
+        
+        foreach ($array as $indice => $obj) {
+            if ($obj[$nomPropiedad] == $caracteristica) {
+                return $indice;
+            }
+        }
+        return Null;
+
+    }
+
+   
 }

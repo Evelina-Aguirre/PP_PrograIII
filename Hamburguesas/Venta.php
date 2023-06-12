@@ -18,7 +18,7 @@ class Venta
 
     public function __construct($email = '', $nombreCliente = '', $tipoPedido = '', $aderezoPedido = '', $cantidPedido = 0)
     {
-        $this->_idVenta = count(Archivos_Json::LeerJson(Venta::archivo)) + 1;
+        $this->_idVenta = $this->ObtenerUltimoElemento() + 1;
         $this->_numPedido = $this->_idVenta + 100;
         $this->_fecha = date('Y-m-d_H-i-s');
         $this->_email = $email;
@@ -26,6 +26,13 @@ class Venta
         $this->_tipoPedido = $tipoPedido;
         $this->_aderezoPedido = $aderezoPedido;
         $this->_cantidadPedido = $cantidPedido;
+    }
+
+    public function ObtenerUltimoElemento()
+    {
+        $array=Archivos_Json::LeerJson(Venta::archivo);
+        $ultimoElemento = end($array);
+        return $ultimoElemento['idVenta'];
     }
 
     public function CargarVenta($tipoPedido, $aderezoPedido, $cantidadPedido)
@@ -118,6 +125,20 @@ class Venta
         }
         Archivos_Json::GuardarArrayJson(Venta::archivo, $arrayVentas);
     }
+
+    public static function BorrarVenta($numPedido)
+    {
+        $arrayAux = Archivos_Json::LeerJson(Venta::archivo);
+        $indice= Busqueda::ObtenerIndice('numPedido',$numPedido, $arrayAux);
+        if($indice!= null)
+        {
+            unset($arrayAux[$indice]);
+            Archivos_Json::GuardarArrayJson(Venta::archivo, $arrayAux);
+            return true;
+        }
+        return false;
+    }
+
 
 
 }

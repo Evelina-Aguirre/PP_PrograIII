@@ -1,5 +1,5 @@
-[
-    {
+{
+    "0": {
         "idVenta": 1,
         "numPedido": 101,
         "fecha": "10-06-2023_00-18-30",
@@ -9,27 +9,7 @@
         "aderezoPedido": "Ejemplo",
         "cantidadPedido": 10
     },
-    {
-        "idVenta": 2,
-        "numPedido": 102,
-        "fecha": "11-06-2023_01-20-47",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "pepa",
-        "tipoPedido": "simple",
-        "aderezoPedido": "ketchup",
-        "cantidadPedido": "20"
-    },
-    {
-        "idVenta": 3,
-        "numPedido": 103,
-        "fecha": "12-06-2023_01-21-44",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "marta",
-        "tipoPedido": "simple",
-        "aderezoPedido": "ketchup",
-        "cantidadPedido": "1"
-    },
-    {
+    "3": {
         "idVenta": 4,
         "numPedido": 104,
         "fecha": "13-06-2023_01-21-48",
@@ -39,7 +19,7 @@
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"
     },
-    {
+    "4": {
         "idVenta": 5,
         "numPedido": 105,
         "fecha": "14-06-2023_01-22-06",
@@ -49,7 +29,7 @@
         "aderezoPedido": "ketchup",
         "cantidadPedido": "5"
     },
-    {
+    "5": {
         "idVenta": 6,
         "numPedido": 106,
         "fecha": "15-06-2023_01-26-35",
@@ -59,7 +39,7 @@
         "aderezoPedido": "mayonesa",
         "cantidadPedido": "1"
     },
-    {
+    "6": {
         "idVenta": 7,
         "numPedido": 107,
         "fecha": "16-06-2023_01-28-45",
@@ -69,7 +49,7 @@
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"
     },
-    {
+    "7": {
         "idVenta": 8,
         "numPedido": 108,
         "fecha": "17-06-2023_01-28-50",
@@ -79,7 +59,7 @@
         "aderezoPedido": "mayonesa",
         "cantidadPedido": "1"
     },
-    {
+    "8": {
         "idVenta": 9,
         "numPedido": 109,
         "fecha": "12-06-2023_01-35-31",
@@ -89,7 +69,7 @@
         "aderezoPedido": "ketchup",
         "cantidadPedido": "3"
     },
-    {
+    "9": {
         "idVenta": 10,
         "numPedido": 110,
         "fecha": "18-06-2023_01-36-33",
@@ -99,7 +79,7 @@
         "aderezoPedido": "ketchup",
         "cantidadPedido": "3"
     },
-    {
+    "10": {
         "idVenta": 11,
         "numPedido": 111,
         "fecha": "19-06-2023_01-37-57",
@@ -109,7 +89,7 @@
         "aderezoPedido": "mayonesa",
         "cantidadPedido": "1"
     },
-    {
+    "11": {
         "idVenta": 12,
         "numPedido": 112,
         "fecha": "12-06-2023_01-41-04",
@@ -119,7 +99,7 @@
         "aderezoPedido": "mayonesa",
         "cantidadPedido": "1"
     },
-    {
+    "12": {
         "idVenta": 13,
         "numPedido": 113,
         "fecha": "12-06-2023_01-41-51",
@@ -129,7 +109,7 @@
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"
     },
-    {
+    "13": {
         "idVenta": 14,
         "numPedido": 114,
         "fecha": "12-06-2023_01-42-22",
@@ -139,7 +119,7 @@
         "aderezoPedido": "mostaza",
         "cantidadPedido": "1"
     },
-    {
+    "14": {
         "idVenta": 15,
         "numPedido": 115,
         "fecha": "12-06-2023_01-42-48",
@@ -148,5 +128,15 @@
         "tipoPedido": "simple",
         "aderezoPedido": "mayonesa",
         "cantidadPedido": "1"
+    },
+    "15": {
+        "idVenta": 16,
+        "numPedido": 116,
+        "fecha": "2023-06-12_20-39-09",
+        "email": "joseph@gmail.com",
+        "nombreCliente": "Jos\u00e9",
+        "tipoPedido": "simple",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "1"
     }
-]
+}

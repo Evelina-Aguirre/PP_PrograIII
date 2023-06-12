@@ -5,7 +5,7 @@
         "precio": "1524",
         "tipo": "simple",
         "aderezo": "mayonesa",
-        "cantidad": 20,
+        "cantidad": 19,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb1-simple.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "precio": "4500",
         "tipo": "doble",
         "aderezo": "mostaza",
-        "cantidad": 5,
+        "cantidad": 2,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb3-doble.jpg"
     },
     {
@@ -32,7 +32,7 @@
         "precio": "4500",
         "tipo": "doble",
         "aderezo": "mostaza",
-        "cantidad": 5,
+        "cantidad": 2,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb4-doble.jpg"
     },
     {
