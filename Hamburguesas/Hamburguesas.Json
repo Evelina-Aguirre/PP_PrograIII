@@ -5,7 +5,7 @@
         "precio": "1524",
         "tipo": "simple",
         "aderezo": "mayonesa",
-        "cantidad": 19,
+        "cantidad": 13,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb1-simple.jpg"
     },
     {
@@ -14,7 +14,7 @@
         "precio": "3500",
         "tipo": "simple",
         "aderezo": "ketchup",
-        "cantidad": 17,
+        "cantidad": 10,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb2-doble.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "precio": "4500",
         "tipo": "doble",
         "aderezo": "mostaza",
-        "cantidad": 2,
+        "cantidad": 10,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb3-doble.jpg"
     },
     {
@@ -32,16 +32,52 @@
         "precio": "4500",
         "tipo": "doble",
         "aderezo": "mostaza",
-        "cantidad": 2,
+        "cantidad": 10,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb4-doble.jpg"
     },
     {
         "id": 5,
         "nombre": "Hamb5",
-        "precio": "2800",
+        "precio": "1500",
         "tipo": "simple",
         "aderezo": "mayonesa",
-        "cantidad": 0,
+        "cantidad": 40,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb5-simple.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Hamb8",
+        "precio": "2800",
+        "tipo": "doble",
+        "aderezo": "mayonesa",
+        "cantidad": 36,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb8-doble.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Hamb8",
+        "precio": "2800",
+        "tipo": "simple",
+        "aderezo": "ketchup",
+        "cantidad": 24,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb8-simple.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Hamb9",
+        "precio": "1500",
+        "tipo": "simple",
+        "aderezo": "ketchup",
+        "cantidad": 16,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb9-simple.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Hamb9",
+        "precio": "1500",
+        "tipo": "dobles",
+        "aderezo": "ketchup",
+        "cantidad": "20",
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb9-dobles.jpg"
     }
 ]

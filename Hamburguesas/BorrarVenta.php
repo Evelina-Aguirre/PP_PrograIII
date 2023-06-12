@@ -5,21 +5,30 @@ include_once '_Json.php';
 
 $numPedido = $_GET['numPedido'];
 
-if (Busqueda::BuscarObjetoEnArray('numPedido',$numPedido,Archivos_Json::LeerJson(Venta::archivo))) {
-echo "entre al if";
-    $borrado=Venta::BorrarVenta($numPedido);
-    
-    // BACKUPVENTAS/2023
-    //$nombreFoto = $venta['foto'];
-    //$rutaFoto = 'BACKUPVENTAS/2023/' . $nombreFoto;
-   // if (rename($nombreFoto, $rutaFoto)) {
-   
-      //  Venta::borrarVenta($numPedido);
-        echo "La venta con número de pedido $numPedido ha sido borrada y la foto se ha movido a la carpeta /BACKUPVENTAS/2023.";
-  //  } else {
-      //  echo "Error al mover la foto a la carpeta /BACKUPVENTAS/2023.";
-    //}
-} else {
-    echo "La venta con número de pedido $numPedido no existe.";
+
+$arrayaux = Archivos_Json::LeerJson(Venta::archivo);
+
+if (Busqueda::BuscarObjetoEnArray('numPedido', $numPedido, $arrayaux)) {
+
+    $indiceVentaABorrar = Busqueda::ObtenerIndice('numPedido', $numPedido, $arrayaux);
+    $rutaOrigen = $arrayaux[$indiceVentaABorrar]['ubicacionImagen'];
+
+    $rutaDestino = str_replace("ImagenesDeHamburguesas/2023/VentasRealizadas/", "BACKUPVENTAS/2023/", $rutaOrigen);
+
+    if (copy($rutaOrigen, $rutaDestino)) {
+
+        $borrado = Venta::BorrarVenta($numPedido);
+
+        if ($borrado) {
+            echo "La venta con número de pedido $numPedido ha sido borrada y la foto se ha movido a la carpeta /BACKUPVENTAS/2023.";
+        } else {
+            echo "No se encontró el Número de Pedido $numPedido";
+        }
+
+    } else {
+        echo "Error al mover la foto a la carpeta /BACKUPVENTAS/2023.";
+    }
+}else
+{
+    echo "No se encontró el Número de Pedido $numPedido";
 }
-?>

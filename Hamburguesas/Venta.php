@@ -13,10 +13,11 @@ class Venta
     public $_tipoPedido;
     public $_aderezoPedido;
     public $_cantidadPedido;
+    public $_ubicacionImagen;
 
     const archivo = "Ventas.Json";
 
-    public function __construct($email = '', $nombreCliente = '', $tipoPedido = '', $aderezoPedido = '', $cantidPedido = 0)
+    public function __construct($email = '', $nombreCliente = '', $tipoPedido = '', $aderezoPedido = '', $cantidPedido = 0,$ubicacionImagen = '')
     {
         $this->_idVenta = $this->ObtenerUltimoElemento() + 1;
         $this->_numPedido = $this->_idVenta + 100;
@@ -26,6 +27,7 @@ class Venta
         $this->_tipoPedido = $tipoPedido;
         $this->_aderezoPedido = $aderezoPedido;
         $this->_cantidadPedido = $cantidPedido;
+        $this->_ubicacionImagen = $ubicacionImagen;
     }
 
     public function ObtenerUltimoElemento()
@@ -58,11 +60,12 @@ class Venta
 
         if ($hay) {
 
-            $nuevaVenta = $this->toArray();
+            $destino = $this->GuardaImagen($tipoPedido, $this->_email, $this->_fecha, $rutaImagen);
+            $nuevaVenta = $this->toArray($destino);
             array_push($arrayVentas, $nuevaVenta);
-            $this->GuardaImagen($tipoPedido, $this->_email, $this->_fecha, $rutaImagen);
             Archivos_Json::GuardarArrayJson(Hamburguesa::archivo, $listaHamburguesas);
             echo "Se realizó la venta con exito";
+            
         } else {
             echo "No hay stock suficiente para realizar la venta";
         }
@@ -70,7 +73,7 @@ class Venta
     }
 
 
-    public function toArray()
+    public function toArray($ubicacionImagen)
     {
         return [
             'idVenta' => $this->_idVenta,
@@ -81,16 +84,17 @@ class Venta
             'tipoPedido' => $this->_tipoPedido,
             'aderezoPedido' => $this->_aderezoPedido,
             'cantidadPedido' => $this->_cantidadPedido,
+            'ubicacionImagen'=> $ubicacionImagen
         ];
     }
 
     public function GuardaImagen($tipoPedido, $email, $fecha, $rutaImagen)
     {
         $usuario = explode('@', $email)[0];
-        echo $usuario;
         $tipoArchivo = pathinfo($rutaImagen, PATHINFO_EXTENSION);
         $destino = "ImagenesDeHamburguesas/2023/VentasRealizadas/" . $tipoPedido . '-' . $usuario . '-' . $fecha . '.' . $tipoArchivo;
         copy($rutaImagen, $destino);
+        return $destino;
     }
 
     public static function ImprimirVenta($array)
@@ -131,7 +135,7 @@ class Venta
         $arrayAux = Archivos_Json::LeerJson(Venta::archivo);
         $indice= Busqueda::ObtenerIndice('numPedido',$numPedido, $arrayAux);
         if($indice!= null)
-        {
+        {  
             unset($arrayAux[$indice]);
             Archivos_Json::GuardarArrayJson(Venta::archivo, $arrayAux);
             return true;

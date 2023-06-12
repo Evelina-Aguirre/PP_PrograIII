@@ -1,142 +1,57 @@
-{
-    "0": {
+[
+    {
         "idVenta": 1,
-        "numPedido": 101,
-        "fecha": "10-06-2023_00-18-30",
-        "email": "ejemplo@gmail.com",
-        "nombreCliente": "Ejemplo",
-        "tipoPedido": "Ejemplo",
-        "aderezoPedido": "Ejemplo",
-        "cantidadPedido": 10
+        "numPedido": 100,
+        "fecha": "2023-06-12_23-02-27",
+        "email": "matias@gmail.com",
+        "nombreCliente": "matias",
+        "tipoPedido": "simple",
+        "aderezoPedido": "ketchup",
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/simple-matias-2023-06-12_23-02-27.jpg"
     },
-    "3": {
+    {
+        "idVenta": 2,
+        "numPedido": 102,
+        "fecha": "2023-06-12_23-02-51",
+        "email": "matias@gmail.com",
+        "nombreCliente": "matias",
+        "tipoPedido": "simple",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "1",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/simple-matias-2023-06-12_23-02-51.jpg"
+    },
+    {
+        "idVenta": 3,
+        "numPedido": 103,
+        "fecha": "2023-06-12_23-03-14",
+        "email": "flavia@gmail.com",
+        "nombreCliente": "flavia",
+        "tipoPedido": "simple",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "1",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/simple-flavia-2023-06-12_23-03-14.jpg"
+    },
+    {
         "idVenta": 4,
         "numPedido": 104,
-        "fecha": "13-06-2023_01-21-48",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "marta",
+        "fecha": "2023-06-12_23-10-28",
+        "email": "maria@gmail.com",
+        "nombreCliente": "maria",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
-        "cantidadPedido": "1"
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/simple-maria-2023-06-12_23-10-28.jpg"
     },
-    "4": {
+    {
         "idVenta": 5,
         "numPedido": 105,
-        "fecha": "14-06-2023_01-22-06",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "pepa",
-        "tipoPedido": "simple",
-        "aderezoPedido": "ketchup",
-        "cantidadPedido": "5"
-    },
-    "5": {
-        "idVenta": 6,
-        "numPedido": 106,
-        "fecha": "15-06-2023_01-26-35",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "faty",
-        "tipoPedido": "simple",
-        "aderezoPedido": "mayonesa",
-        "cantidadPedido": "1"
-    },
-    "6": {
-        "idVenta": 7,
-        "numPedido": 107,
-        "fecha": "16-06-2023_01-28-45",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "florencia",
-        "tipoPedido": "simple",
-        "aderezoPedido": "ketchup",
-        "cantidadPedido": "1"
-    },
-    "7": {
-        "idVenta": 8,
-        "numPedido": 108,
-        "fecha": "17-06-2023_01-28-50",
-        "email": "pepa@gmail.com",
+        "fecha": "2023-06-12_23-10-44",
+        "email": "pedro@gmail.com",
         "nombreCliente": "pedro",
         "tipoPedido": "simple",
-        "aderezoPedido": "mayonesa",
-        "cantidadPedido": "1"
-    },
-    "8": {
-        "idVenta": 9,
-        "numPedido": 109,
-        "fecha": "12-06-2023_01-35-31",
-        "email": "marla@gmail.com",
-        "nombreCliente": "Marla",
-        "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
-        "cantidadPedido": "3"
-    },
-    "9": {
-        "idVenta": 10,
-        "numPedido": 110,
-        "fecha": "18-06-2023_01-36-33",
-        "email": "franco@gmail.com",
-        "nombreCliente": "franco",
-        "tipoPedido": "simple",
-        "aderezoPedido": "ketchup",
-        "cantidadPedido": "3"
-    },
-    "10": {
-        "idVenta": 11,
-        "numPedido": 111,
-        "fecha": "19-06-2023_01-37-57",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "Silvana",
-        "tipoPedido": "simple",
-        "aderezoPedido": "mayonesa",
-        "cantidadPedido": "1"
-    },
-    "11": {
-        "idVenta": 12,
-        "numPedido": 112,
-        "fecha": "12-06-2023_01-41-04",
-        "email": "marta@gmail.com",
-        "nombreCliente": "Federico",
-        "tipoPedido": "simple",
-        "aderezoPedido": "mayonesa",
-        "cantidadPedido": "1"
-    },
-    "12": {
-        "idVenta": 13,
-        "numPedido": 113,
-        "fecha": "12-06-2023_01-41-51",
-        "email": "marta@gmail.com",
-        "nombreCliente": "Lucas",
-        "tipoPedido": "simple",
-        "aderezoPedido": "ketchup",
-        "cantidadPedido": "1"
-    },
-    "13": {
-        "idVenta": 14,
-        "numPedido": 114,
-        "fecha": "12-06-2023_01-42-22",
-        "email": "marta@gmail.com",
-        "nombreCliente": "Pedro",
-        "tipoPedido": "simple",
-        "aderezoPedido": "mostaza",
-        "cantidadPedido": "1"
-    },
-    "14": {
-        "idVenta": 15,
-        "numPedido": 115,
-        "fecha": "12-06-2023_01-42-48",
-        "email": "marta@gmail.com",
-        "nombreCliente": "Sara",
-        "tipoPedido": "simple",
-        "aderezoPedido": "mayonesa",
-        "cantidadPedido": "1"
-    },
-    "15": {
-        "idVenta": 16,
-        "numPedido": 116,
-        "fecha": "2023-06-12_20-39-09",
-        "email": "joseph@gmail.com",
-        "nombreCliente": "Jos\u00e9",
-        "tipoPedido": "simple",
-        "aderezoPedido": "mayonesa",
-        "cantidadPedido": "1"
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/simple-pedro-2023-06-12_23-10-44.jpg"
     }
-}
+]

@@ -26,6 +26,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 require_once 'ConsultasVentas.php';
                 break;
 
+            case 'DevolverHamburguesa':
+                require_once 'DevolverHamburguesa.php';
+                break;           
+
             default:
 
                 echo "La acción que se menciona no es valida";
@@ -38,4 +42,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case "DELETE":
         require_once 'BorrarVenta.php';
         break;
+
+        default:
+        echo "La acción a realizar no es válida";
 }
