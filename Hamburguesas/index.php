@@ -22,6 +22,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 require_once 'AltaVenta.php';
                 break;
 
+            case 'ConsultasVentas':
+                require_once 'ConsultasVentas.php';
+                break;
+
             default:
 
                 echo "La acción que se menciona no es valida";

@@ -20,7 +20,7 @@ class Venta
     {
         $this->_idVenta = count(Archivos_Json::LeerJson(Venta::archivo)) + 1;
         $this->_numPedido = $this->_idVenta + 100;
-        $this->_fecha = date('d-m-Y_H-i-s');
+        $this->_fecha = date('Y-m-d_H-i-s');
         $this->_email = $email;
         $this->_nombreCliente = $nombreCliente;
         $this->_tipoPedido = $tipoPedido;

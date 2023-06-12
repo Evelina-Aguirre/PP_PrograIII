@@ -2,7 +2,7 @@
     {
         "idVenta": 1,
         "numPedido": 101,
-        "fecha": "12-06-2023_00-18-30",
+        "fecha": "13-06-2023_00-18-30",
         "email": "pepe@gmail.com",
         "nombreCliente": "pepe",
         "tipoPedido": "doble",
