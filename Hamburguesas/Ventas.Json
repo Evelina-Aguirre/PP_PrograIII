@@ -2,7 +2,7 @@
     {
         "idVenta": 1,
         "numPedido": 101,
-        "fecha": "13-06-2023_00-18-30",
+        "fecha": "10-06-2023_00-18-30",
         "email": "pepe@gmail.com",
         "nombreCliente": "pepe",
         "tipoPedido": "doble",
@@ -12,7 +12,7 @@
     {
         "idVenta": 2,
         "numPedido": 102,
-        "fecha": "12-06-2023_01-20-47",
+        "fecha": "11-06-2023_01-20-47",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
@@ -32,7 +32,7 @@
     {
         "idVenta": 4,
         "numPedido": 104,
-        "fecha": "12-06-2023_01-21-48",
+        "fecha": "13-06-2023_01-21-48",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
@@ -42,7 +42,7 @@
     {
         "idVenta": 5,
         "numPedido": 105,
-        "fecha": "12-06-2023_01-22-06",
+        "fecha": "14-06-2023_01-22-06",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
@@ -52,7 +52,7 @@
     {
         "idVenta": 6,
         "numPedido": 106,
-        "fecha": "12-06-2023_01-26-35",
+        "fecha": "15-06-2023_01-26-35",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
@@ -62,7 +62,7 @@
     {
         "idVenta": 7,
         "numPedido": 107,
-        "fecha": "12-06-2023_01-28-45",
+        "fecha": "16-06-2023_01-28-45",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
@@ -72,7 +72,7 @@
     {
         "idVenta": 8,
         "numPedido": 108,
-        "fecha": "12-06-2023_01-28-50",
+        "fecha": "17-06-2023_01-28-50",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
@@ -92,7 +92,7 @@
     {
         "idVenta": 10,
         "numPedido": 110,
-        "fecha": "12-06-2023_01-36-33",
+        "fecha": "18-06-2023_01-36-33",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
@@ -102,7 +102,7 @@
     {
         "idVenta": 11,
         "numPedido": 111,
-        "fecha": "12-06-2023_01-37-57",
+        "fecha": "19-06-2023_01-37-57",
         "email": "pepa@gmail.com",
         "nombreCliente": "pepa",
         "tipoPedido": "simple",
