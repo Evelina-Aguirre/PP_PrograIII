@@ -3,11 +3,11 @@
         "idVenta": 1,
         "numPedido": 101,
         "fecha": "10-06-2023_00-18-30",
-        "email": "pepe@gmail.com",
-        "nombreCliente": "pepe",
-        "tipoPedido": "doble",
-        "aderezoPedido": "mayonesa",
-        "cantidadPedido": "1"
+        "email": "ejemplo@gmail.com",
+        "nombreCliente": "Ejemplo",
+        "tipoPedido": "Ejemplo",
+        "aderezoPedido": "Ejemplo",
+        "cantidadPedido": 10
     },
     {
         "idVenta": 2,

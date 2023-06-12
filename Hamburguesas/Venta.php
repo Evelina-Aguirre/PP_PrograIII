@@ -100,4 +100,24 @@ class Venta
             echo  "-----------------</br></br>";
         }
     }
+
+    public static function ModificarVenta($numPedido, $email, $nombre, $tipo, $aderezo, $cantidad)
+    {
+        $arrayVentas = Archivos_Json::LeerJson(Venta::archivo);
+        foreach ($arrayVentas as &$venta) {
+            if ($venta['numPedido'] == $numPedido) {
+
+                $venta['email'] = $email;
+                $venta['nombreCliente'] = $nombre;
+                $venta['tipoPedido'] = $tipo;
+                $venta['aderezoPedido'] = $aderezo;
+                $venta['cantidadPedido'] = $cantidad;
+
+                break;
+            }
+        }
+        Archivos_Json::GuardarArrayJson(Venta::archivo, $arrayVentas);
+    }
+
+
 }

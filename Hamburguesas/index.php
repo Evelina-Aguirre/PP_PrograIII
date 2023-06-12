@@ -32,4 +32,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 break;
         }
         break;
+        case "PUT":
+            require_once 'ModificarVenta.php';
+                break;
 }
