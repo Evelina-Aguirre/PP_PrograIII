@@ -83,8 +83,8 @@
         "idVenta": 9,
         "numPedido": 109,
         "fecha": "12-06-2023_01-35-31",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "pepa",
+        "email": "marla@gmail.com",
+        "nombreCliente": "Marla",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
         "cantidadPedido": "3"
@@ -93,8 +93,8 @@
         "idVenta": 10,
         "numPedido": 110,
         "fecha": "18-06-2023_01-36-33",
-        "email": "pepa@gmail.com",
-        "nombreCliente": "pepa",
+        "email": "franco@gmail.com",
+        "nombreCliente": "franco",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
         "cantidadPedido": "3"
@@ -104,7 +104,7 @@
         "numPedido": 111,
         "fecha": "19-06-2023_01-37-57",
         "email": "pepa@gmail.com",
-        "nombreCliente": "pepa",
+        "nombreCliente": "Silvana",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"
@@ -114,7 +114,7 @@
         "numPedido": 112,
         "fecha": "12-06-2023_01-41-04",
         "email": "marta@gmail.com",
-        "nombreCliente": "pepa",
+        "nombreCliente": "Federico",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"
@@ -124,7 +124,7 @@
         "numPedido": 113,
         "fecha": "12-06-2023_01-41-51",
         "email": "marta@gmail.com",
-        "nombreCliente": "pepa",
+        "nombreCliente": "Lucas",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"
@@ -134,7 +134,7 @@
         "numPedido": 114,
         "fecha": "12-06-2023_01-42-22",
         "email": "marta@gmail.com",
-        "nombreCliente": "pepa",
+        "nombreCliente": "Pedro",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"
@@ -144,7 +144,7 @@
         "numPedido": 115,
         "fecha": "12-06-2023_01-42-48",
         "email": "marta@gmail.com",
-        "nombreCliente": "pepa",
+        "nombreCliente": "Sara",
         "tipoPedido": "simple",
         "aderezoPedido": "ketchup",
         "cantidadPedido": "1"

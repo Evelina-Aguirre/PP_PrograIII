@@ -20,6 +20,17 @@ class Busqueda
         return false;
     }
 
+    public static function BuscarObjetoEnArrayYCargarLista($nombProp, $caracteristica, $array)
+    {
+        $nuevoArray=array();
+        foreach ($array as $objebArray) {
+            if (self::BuscaCaracteristica($nombProp, $caracteristica, $objebArray)) {
+                $nuevoArray[]=$objebArray;
+            }
+        }
+        return $nuevoArray;
+    }
+
     public static function BuscaCaracteristica($nombProp, $caracteristica, $obj)
     {
         foreach ($obj as $clave => $valor) {

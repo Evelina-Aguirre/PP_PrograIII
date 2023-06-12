@@ -37,13 +37,14 @@ class Venta
 
         $hay = false;
         foreach ($listaHamburguesas as &$hamburguesa) {
-            if (Busqueda::BuscaCaracteristica('tipo', $tipoPedido, $hamburguesa) &&
-                Busqueda::BuscaCaracteristica('aderezo', $aderezoPedido, $hamburguesa)) {
+            if (
+                Busqueda::BuscaCaracteristica('tipo', $tipoPedido, $hamburguesa) &&
+                Busqueda::BuscaCaracteristica('aderezo', $aderezoPedido, $hamburguesa)
+            ) {
                 if ($hamburguesa['cantidad'] > 0 && $cantidadPedido <= $hamburguesa['cantidad']) {
                     $hay = true;
                     $hamburguesa['cantidad'] -= $cantidadPedido;
                     $rutaImagen = $hamburguesa['imagen'];
-                    
                 }
             }
         }
@@ -53,9 +54,8 @@ class Venta
             $nuevaVenta = $this->toArray();
             array_push($arrayVentas, $nuevaVenta);
             $this->GuardaImagen($tipoPedido, $this->_email, $this->_fecha, $rutaImagen);
-            Archivos_Json::GuardarArrayJson(Hamburguesa::archivo,$listaHamburguesas);
+            Archivos_Json::GuardarArrayJson(Hamburguesa::archivo, $listaHamburguesas);
             echo "Se realizó la venta con exito";
-
         } else {
             echo "No hay stock suficiente para realizar la venta";
         }
@@ -84,5 +84,20 @@ class Venta
         $tipoArchivo = pathinfo($rutaImagen, PATHINFO_EXTENSION);
         $destino = "ImagenesDeHamburguesas/2023/VentasRealizadas/" . $tipoPedido . '-' . $usuario . '-' . $fecha . '.' . $tipoArchivo;
         copy($rutaImagen, $destino);
+    }
+
+    public static function ImprimirVenta($array)
+    {
+        foreach ($array as $venta) {
+            echo "\nID de venta: ", $venta['idVenta'], "</br>";
+            echo "Número de pedido:", $venta['numPedido'], "</br>";
+            echo "Fecha: ", $venta['fecha'], "</br>";
+            echo "Email: ", $venta['email'], "</br>";
+            echo "Nombre del cliente: ", $venta['nombreCliente'], "</br>";
+            echo "Tipo de pedido: ", $venta['tipoPedido'], "</br>";
+            echo "Aderezo del pedido: ", $venta['aderezoPedido'], "</br>";
+            echo "Cantidad de hamburguesas vendidas: ", $venta['cantidadPedido'], "</br>";
+            echo  "-----------------</br></br>";
+        }
     }
 }
