@@ -53,5 +53,102 @@
         "aderezoPedido": "ketchup",
         "cantidadPedido": "2",
         "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/simple-pedro-2023-06-12_23-10-44.jpg"
+    },
+    {
+        "idVenta": 6,
+        "numPedido": 106,
+        "fecha": "2023-06-18_03-14-26",
+        "email": "angel@gmail.com",
+        "nombreCliente": "angel",
+        "tipoPedido": "doble",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/doble-angel-2023-06-18_03-14-26.jpg",
+        "cupon": {
+            "codigo": "648df5d295b25",
+            "descuento": 0.1,
+            "vencimiento": "2023-06-20"
+        }
+    },
+    {
+        "idVenta": 7,
+        "numPedido": 107,
+        "fecha": "2023-06-18_03-15-07",
+        "email": "angel@gmail.com",
+        "nombreCliente": "angel",
+        "tipoPedido": "doble",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/doble-angel-2023-06-18_03-15-07.jpg",
+        "cupon": {
+            "codigo": "648df5d295b25",
+            "descuento": 0.1,
+            "vencimiento": "2023-06-20"
+        }
+    },
+    {
+        "idVenta": 8,
+        "numPedido": 108,
+        "fecha": "2023-06-18_03-15-35",
+        "email": "angel@gmail.com",
+        "nombreCliente": "angel",
+        "tipoPedido": "doble",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/doble-angel-2023-06-18_03-15-35.jpg",
+        "cupon": {
+            "codigo": "648df5d295b25",
+            "descuento": 0.1,
+            "vencimiento": "2023-06-20"
+        }
+    },
+    {
+        "idVenta": 9,
+        "numPedido": 109,
+        "fecha": "2023-06-18_03-18-50",
+        "email": "angel@gmail.com",
+        "nombreCliente": "angel",
+        "tipoPedido": "doble",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/doble-angel-2023-06-18_03-18-50.jpg",
+        "cupon": {
+            "codigo": "648df5d295b25",
+            "descuento": 0.1,
+            "vencimiento": "2023-06-20"
+        }
+    },
+    {
+        "idVenta": 10,
+        "numPedido": 110,
+        "fecha": "2023-06-18_03-20-04",
+        "email": "angel@gmail.com",
+        "nombreCliente": "angel",
+        "tipoPedido": "doble",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/doble-angel-2023-06-18_03-20-04.jpg",
+        "cupon": {
+            "codigo": "648df5d295b25",
+            "descuento": 0.1,
+            "vencimiento": "2023-06-20"
+        }
+    },
+    {
+        "idVenta": 11,
+        "numPedido": 111,
+        "fecha": "2023-06-18_04-13-26",
+        "email": "juan@gmail.com",
+        "nombreCliente": "juan",
+        "tipoPedido": "simple",
+        "aderezoPedido": "mayonesa",
+        "cantidadPedido": "2",
+        "ubicacionImagen": "ImagenesDeHamburguesas\/2023\/VentasRealizadas\/simple-juan-2023-06-18_04-13-26.jpg",
+        "cupon": {
+            "codigo": "648df5d295b25",
+            "descuento": 0.1,
+            "vencimiento": "2023-06-20"
+        },
+        "precioTotal": 2700
     }
 ]

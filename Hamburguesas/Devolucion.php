@@ -8,14 +8,22 @@ class Devolucion{
     }
 
 
-public static function generarDevolucion($numPedido,$causaDevolucion,$fotoClienteEnojado)
+public static function generarDevolucion($numPedido,$causaDevolucion,$fotoClienteEnojado,$cuponDescuento)
 {
     $devolucion = array(
         'numPedido' => $numPedido,
         'causaDevolucion' => $causaDevolucion,
-        'fotoClienteEnojado' => $fotoClienteEnojado['name'] // Guardar el nombre de la foto
+        'fotoClienteEnojado' => $fotoClienteEnojado,
+        'cuponGenerado'=>$cuponDescuento
     );
     return $devolucion;
+}
+
+
+public static function GuardarDevolucion($devolucion){
+    $devoluciones = Archivos_Json::LeerJson('devoluciones.json');
+    $devoluciones[] = $devolucion;
+    Archivos_Json::GuardarArrayJson('devoluciones.json', $devoluciones);
 }
 
     

@@ -16,11 +16,12 @@ class Hamburguesa{
     public $_imagen;
     
     const archivo = "Hamburguesas.Json";
+    public static $stock;
     
 public function __construct($nombre="",$precio=0,$tipo="",$aderezo="",$cantidad=0,$imagen="")
 {
-    // Archivos_Json::$_arrayObj=array();
     $this->_id=count(Archivos_Json::LeerJson(Hamburguesa::archivo))+1;
+    Hamburguesa::$stock = count(Archivos_Json::LeerJson(Hamburguesa::archivo));
     $this->_nombre=$nombre;
     $this->_precio=$precio;
     $this->_tipo=$tipo;
@@ -40,23 +41,16 @@ public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad,$imagen)
     $existe= false;
     foreach($hamburguesas as &$hamburguesa)
     {
-        /*if ($hamburguesa['nombre'] == $nombre && $hamburguesa['tipo'] == $tipo) {
-            $hamburguesa['precio'] = $precio;
-            $hamburguesa['cantidad'] += $cantidad;
-            $existe = true;
-            break;
-        }*/
       if(Busqueda::BuscaCaracteristica('nombre',$nombre,$hamburguesa) &&
            Busqueda::BuscaCaracteristica('tipo',$tipo,$hamburguesa))
            {
             $hamburguesa['precio'] = $precio;
             $hamburguesa['cantidad'] += $cantidad;
+            Hamburguesa::$stock+=$cantidad;
             $existe = true;
             echo "Se modifica una hamburguesa existente.</br>";
             break;
            }
-            
-
     }
 
     if(!$existe)
@@ -69,7 +63,8 @@ public function Cargar($nombre,$tipo,$precio,$aderezo,$cantidad,$imagen)
         'aderezo'=>$aderezo,
         'cantidad' => $cantidad,
         'imagen' =>$imagen
-        );     
+        );
+    Hamburguesa::$stock+=$cantidad;     
     array_push($hamburguesas,$nuevaHamburguesa);
     }
     Archivos_Json::GuardarArrayJson(Hamburguesa::archivo,$hamburguesas);
