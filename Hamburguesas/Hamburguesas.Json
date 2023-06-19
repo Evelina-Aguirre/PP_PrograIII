@@ -5,7 +5,7 @@
         "precio": "1524",
         "tipo": "simple",
         "aderezo": "mayonesa",
-        "cantidad": 11,
+        "cantidad": 10,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb1-simple.jpg"
     },
     {
@@ -14,7 +14,7 @@
         "precio": "3500",
         "tipo": "simple",
         "aderezo": "ketchup",
-        "cantidad": 10,
+        "cantidad": 7,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb2-doble.jpg"
     },
     {
@@ -41,7 +41,7 @@
         "precio": "1500",
         "tipo": "simple",
         "aderezo": "mayonesa",
-        "cantidad": 38,
+        "cantidad": 2,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb5-simple.jpg"
     },
     {
@@ -59,7 +59,7 @@
         "precio": "2800",
         "tipo": "simple",
         "aderezo": "ketchup",
-        "cantidad": 24,
+        "cantidad": 0,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb8-simple.jpg"
     },
     {
@@ -68,7 +68,7 @@
         "precio": "1500",
         "tipo": "simple",
         "aderezo": "ketchup",
-        "cantidad": 36,
+        "cantidad": 0,
         "imagen": "ImagenesDeHamburguesas\/2023\/Hamb9-simple.jpg"
     },
     {

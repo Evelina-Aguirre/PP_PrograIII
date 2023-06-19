@@ -20,7 +20,7 @@ class Venta
 
     const archivo = "Ventas.Json";
 
-    public function __construct($email = '', $nombreCliente = '', $tipoPedido = '', $aderezoPedido = '', $cantidPedido = 0,$cupon=[])
+    public function __construct($email = '', $nombreCliente = '', $tipoPedido = '', $aderezoPedido = '', $cantidPedido = 0, $cupon = [])
     {
         $this->_idVenta = $this->ObtenerUltimoElemento() + 1;
         $this->_numPedido = $this->_idVenta + 100;
@@ -30,12 +30,12 @@ class Venta
         $this->_tipoPedido = $tipoPedido;
         $this->_aderezoPedido = $aderezoPedido;
         $this->_cantidadPedido = $cantidPedido;
-        $this->_cupon=$cupon;
+        $this->_cupon = $cupon;
     }
 
     public function ObtenerUltimoElemento()
     {
-        $array=Archivos_Json::LeerJson(Venta::archivo);
+        $array = Archivos_Json::LeerJson(Venta::archivo);
         $ultimoElemento = end($array);
         return $ultimoElemento['idVenta'];
     }
@@ -46,7 +46,6 @@ class Venta
         $listaHamburguesas = Archivos_Json::LeerJson(Hamburguesa::archivo);
         $arrayVentas = Archivos_Json::LeerJson(Venta::archivo);
         $rutaImagen = "";
-        $precioTotal=0;
 
         $hay = false;
         foreach ($listaHamburguesas as &$hamburguesa) {
@@ -57,7 +56,8 @@ class Venta
                 if ($hamburguesa['cantidad'] > 0 && $cantidadPedido <= $hamburguesa['cantidad']) {
                     $hay = true;
                     $hamburguesa['cantidad'] -= $cantidadPedido;
-                    $precioTotal=($hamburguesa['precio']* $cantidadPedido);
+                    $this->_totalVenta = ($hamburguesa['precio'] * $cantidadPedido);
+                    $this->_totalVenta = $this->CalcularPrecioConCupon();
                     $rutaImagen = $hamburguesa['imagen'];
                 }
             }
@@ -66,11 +66,10 @@ class Venta
         if ($hay) {
 
             $destino = $this->GuardaImagen($tipoPedido, $this->_email, $this->_fecha, $rutaImagen);
-            $nuevaVenta = $this->toArray($destino,$precioTotal);
+            $nuevaVenta = $this->toArray($destino);
             array_push($arrayVentas, $nuevaVenta);
             Archivos_Json::GuardarArrayJson(Hamburguesa::archivo, $listaHamburguesas);
             echo "Se realizó la venta con exito";
-            
         } else {
             echo "No hay stock suficiente para realizar la venta";
         }
@@ -78,15 +77,8 @@ class Venta
     }
 
 
-    public function toArray($ubicacionImagen,$precioTotal)
+    public function toArray($ubicacionImagen)
     {
-        if($this->_cupon!= null)
-        {
-            $precioTotal-= $precioTotal * $this->_cupon['descuento'];
-            $cupon=Cupon::BuscarCupon(Archivos_Json::LeerJson('cupones.json'), $this->_cupon['codigo']);
-            $cupon['estado']=true;
-            cupon::GuardarCupon($cupon);
-        }
         return [
             'idVenta' => $this->_idVenta,
             'numPedido' => $this->_numPedido,
@@ -96,9 +88,9 @@ class Venta
             'tipoPedido' => $this->_tipoPedido,
             'aderezoPedido' => $this->_aderezoPedido,
             'cantidadPedido' => $this->_cantidadPedido,
-            'ubicacionImagen'=> $ubicacionImagen,
-            'cupon'=>$this->_cupon,
-            'precioTotal'=>$precioTotal
+            'ubicacionImagen' => $ubicacionImagen,
+            'cupon' => $this->_cupon,
+            'precioTotal' => $this->_totalVenta
         ];
     }
 
@@ -122,8 +114,7 @@ class Venta
             echo "Tipo de pedido: ", $venta['tipoPedido'], "</br>";
             echo "Aderezo del pedido: ", $venta['aderezoPedido'], "</br>";
             echo "Cantidad de hamburguesas vendidas: ", $venta['cantidadPedido'], "</br>";
-            if($venta['cupon']!=null)
-            {
+            if ($venta['cupon'] != null) {
                 echo "Cupón: ", $venta['cupon'], "</br>";
             }
             echo  "-----------------</br></br>";
@@ -148,12 +139,16 @@ class Venta
         Archivos_Json::GuardarArrayJson(Venta::archivo, $arrayVentas);
     }
 
+    public function ModificarCuponVenta($cupon)
+    {
+        $this->_cupon = $cupon;
+    }
+
     public static function BorrarVenta($numPedido)
     {
         $arrayAux = Archivos_Json::LeerJson(Venta::archivo);
-        $indice= Busqueda::ObtenerIndice('numPedido',$numPedido, $arrayAux);
-        if($indice!= null)
-        {  
+        $indice = Busqueda::ObtenerIndice('numPedido', $numPedido, $arrayAux);
+        if ($indice != null) {
             unset($arrayAux[$indice]);
             Archivos_Json::GuardarArrayJson(Venta::archivo, $arrayAux);
             return true;
@@ -161,6 +156,24 @@ class Venta
         return false;
     }
 
+    public function CalcularPrecioConCupon()
+    {
+        if ($this->_cupon != null) {
+            
+            if (!$this->_cupon['usado'] && !Cupon::verificarCuponVencido($this->_cupon['codigo'])) {
 
+                $this->_totalVenta -= $this->_totalVenta * $this->_cupon['descuento'];
+                $cupon = Cupon::BuscarCupon(Archivos_Json::LeerJson('cupones.json'), $this->_cupon['codigo']);
+                $cupon['usado'] = true;
+                cupon::ModificarCupon($cupon);
 
+            } else if (Cupon::verificarCuponVencido($this->_cupon['codigo'])) {
+
+                echo '</br> Aviso ! El cupón ', $this->_cupon['codigo'], ' expiró el : ', $this->_cupon['vencimiento'], ' No se aplicará el descuento</br></br>';
+            } else {
+
+                echo '</br> Aviso ! El cupón ',  $this->_cupon['codigo'], ' ya fue utilizado. No se aplicará el descuento.</br> </br>';
+            }
+        }
+    }
 }

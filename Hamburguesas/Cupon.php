@@ -9,13 +9,13 @@ class Cupon
         $instancia = new self();
     }
 
-    public static function GenerarCuponDescuento($porcentajeDescuento, $diasVencimiento, $estado)
+    public static function GenerarCuponDescuento($porcentajeDescuento, $diasVencimiento, $usado)
     {
         $cupon = array(
             'codigo' => self::generarCodigoCupon(),
             'descuento' => $porcentajeDescuento,
             'vencimiento' => self::calcularFechaVencimiento($diasVencimiento),
-            'usado' => $estado //true , false
+            'usado' => $usado //true , false
         );
 
         return $cupon;
@@ -42,7 +42,7 @@ class Cupon
         $cupones = $jsonCupones;
 
         foreach ($cupones as $cupon) {
-            if ($cupon['codigo'] === $codigoCupon) {
+            if ($cupon['codigo'] == $codigoCupon) {
                 $cuponEncontrado = $cupon;
                 break;
             }
@@ -56,4 +56,41 @@ class Cupon
         $cupones[] = $cuponDescuento;
         Archivos_Json::GuardarArrayJson('cupones.json', $cupones);
     }
+
+    public static function ModificarCupon($cuponVenta)
+    {
+        $cupones = Archivos_Json::LeerJson('cupones.json');
+        foreach ($cupones as &$cupon) {
+            if ($cupon['codigo'] == $cuponVenta['codigo']) {
+                $cupon['descuento'] =  $cuponVenta['descuento'];
+                $cupon['vencimiento'] =  $cuponVenta['vencimiento'];
+                $cupon['usado'] =  $cuponVenta['usado'];
+            }
+        }
+        Archivos_Json::GuardarArrayJson('cupones.json', $cupones);
+    }
+
+    
+    public static function verificarCuponVencido($codigoCupon)
+    {
+        $rtn = false;
+        $cupones = Archivos_Json::LeerJson('cupones.json');
+        $cuponEncontrado = self::BuscarCupon($cupones, $codigoCupon);
+        if ($cuponEncontrado) {
+            $fechaActual = new DateTime();
+            $fechaVencimiento = DateTime::createFromFormat('Y-m-d', $cuponEncontrado['vencimiento']);
+
+            $fechaActualStr = $fechaActual->format('Y-m-d'); 
+            
+            if ($fechaActualStr > $fechaVencimiento->format('Y-m-d')) {
+                $rtn = true; 
+            }
+        }
+    
+        return $rtn;
+    }
+    
+
+
+
 }

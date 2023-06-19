@@ -35,9 +35,10 @@ if (Busqueda::BuscarObjetoEnArray('numPedido', $numPedido, Archivos_Json::LeerJs
 
     $devolucion = Devolucion::generarDevolucion($numPedido, $causaDevolucion, $nombreFotoClienteEnojado, $CodigoCuponDescuento);
 
-    $devoluciones = Archivos_Json::LeerJson('devoluciones.json');
+    Devolucion::GuardarDevolucion($devolucion);
+   /* $devoluciones = Archivos_Json::LeerJson('devoluciones.json');
     $devoluciones[] = $devolucion;
-    Archivos_Json::GuardarArrayJson('devoluciones.json', $devoluciones);
+    Archivos_Json::GuardarArrayJson('devoluciones.json', $devoluciones);*/
 
 
     echo 'Devolución registrada correctamente. Se generó un cupón de descuento para la próxima compra.';

@@ -15,14 +15,12 @@ $cantidad = $_POST['cantidad'];
 if (isset($_POST['cupon'])) {
     $cupon = $_POST['cupon'];
     $cuponEncontrado=Cupon::BuscarCupon(Archivos_Json::LeerJson('cupones.json'),$cupon);
+
 }
 
-
-//if(Hamburguesa::$stock >0)
-//{
     $venta = new Venta($email,$nombre,$tipo,$aderezo,$cantidad,$cuponEncontrado);
     $venta->CargarVenta($tipo, $aderezo, $cantidad);
-//}
+
 
 //print_r($venta->_cupon['descuento']);
 /*
