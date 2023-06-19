@@ -1,8 +1,8 @@
 <?php
+include_once "_JSON.php";
 
 class Cupon
 {
-
 
     public static function inicializarCupon()
     {
@@ -15,7 +15,7 @@ class Cupon
             'codigo' => self::generarCodigoCupon(),
             'descuento' => $porcentajeDescuento,
             'vencimiento' => self::calcularFechaVencimiento($diasVencimiento),
-            'usado' => $usado //true , false
+            'usado' => $usado 
         );
 
         return $cupon;

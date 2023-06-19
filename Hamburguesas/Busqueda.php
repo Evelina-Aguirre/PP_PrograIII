@@ -102,7 +102,6 @@ class Busqueda
     }
 
 
-    //Ejemplo  Public static function ObtenerIndice('numPedido', '101', leerJson(archivo))
     Public static function ObtenerIndice($nomPropiedad, $caracteristica, $array)
     {
         
