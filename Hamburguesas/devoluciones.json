@@ -1,9 +1,27 @@
 [
     {
-        "numPedido": "103",
+        "numPedido": "101",
+        "causaDevolucion": "Est\u00e1 frio",
+        "fotoClienteEnojado": null,
+        "cuponGenerado": null
+    },
+    {
+        "numPedido": "101",
         "causaDevolucion": "Est\u00e1 frio",
         "fotoClienteEnojado": "Cup\u00f3n.png",
-        "cuponGenerado": "648e0e55d4e71"
+        "cuponGenerado": "6490c76d1f555"
+    },
+    {
+        "numPedido": "101",
+        "causaDevolucion": "Est\u00e1 frio",
+        "fotoClienteEnojado": "Cup\u00f3n.png",
+        "cuponGenerado": "6490c77d22028"
+    },
+    {
+        "numPedido": "104",
+        "causaDevolucion": "Est\u00e1 frio",
+        "fotoClienteEnojado": "2023ClientaEnojada4.jpg",
+        "cuponGenerado": "6490c8294594c"
     },
     {
         "numPedido": "105",
@@ -12,15 +30,33 @@
         "cuponGenerado": null
     },
     {
-        "numPedido": "106",
+        "numPedido": "102",
         "causaDevolucion": "Est\u00e1 frio",
-        "fotoClienteEnojado": "Cup\u00f3n.png",
-        "cuponGenerado": "648f9bf89ebf7"
+        "fotoClienteEnojado": "2023Cliente enojado6.jpg",
+        "cuponGenerado": "6490c86eeab55"
     },
     {
-        "numPedido": "107",
+        "numPedido": "102",
         "causaDevolucion": "Est\u00e1 frio",
-        "fotoClienteEnojado": null,
-        "cuponGenerado": null
+        "fotoClienteEnojado": "2023Cliente enojado6.jpg",
+        "cuponGenerado": "6490c878c478f"
+    },
+    {
+        "numPedido": "102",
+        "causaDevolucion": "Est\u00e1 frio",
+        "fotoClienteEnojado": "20232023ClientaEnojada4.jpg",
+        "cuponGenerado": "6490c883038d4"
+    },
+    {
+        "numPedido": "102",
+        "causaDevolucion": "Est\u00e1 frio",
+        "fotoClienteEnojado": "20232023ClientaEnojada4.jpg",
+        "cuponGenerado": "6490c88452522"
+    },
+    {
+        "numPedido": "102",
+        "causaDevolucion": "Est\u00e1 frio",
+        "fotoClienteEnojado": "20232023ClientaEnojada4.jpg",
+        "cuponGenerado": "6490e03b834a8"
     }
 ]

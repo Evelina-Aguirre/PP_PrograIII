@@ -22,10 +22,9 @@ if (Busqueda::BuscarObjetoEnArray('numPedido', $numPedido, Archivos_Json::LeerJs
         $cuponDescuento = Cupon::GenerarCuponDescuento(0.1, 3, false);
         $CodigoCuponDescuento = $cuponDescuento['codigo'];
 
+        echo "Se generò un cupòn de descuento </br>";
+
         cupon::GuardarCupon($cuponDescuento);
-        /*$cupones = Archivos_Json::LeerJson('cupones.json');
-        $cupones[] = $cuponDescuento;
-        Archivos_Json::GuardarArrayJson('cupones.json', $cupones);*/
 
         $rutaOrigen = $fotoClienteEnojado['tmp_name'];
         $rutaDestino = 'ImagenesClientesEnojados/2023' . $fotoClienteEnojado['name'];
@@ -36,12 +35,9 @@ if (Busqueda::BuscarObjetoEnArray('numPedido', $numPedido, Archivos_Json::LeerJs
     $devolucion = Devolucion::generarDevolucion($numPedido, $causaDevolucion, $nombreFotoClienteEnojado, $CodigoCuponDescuento);
 
     Devolucion::GuardarDevolucion($devolucion);
-   /* $devoluciones = Archivos_Json::LeerJson('devoluciones.json');
-    $devoluciones[] = $devolucion;
-    Archivos_Json::GuardarArrayJson('devoluciones.json', $devoluciones);*/
 
 
-    echo 'Devolución registrada correctamente. Se generó un cupón de descuento para la próxima compra.';
+    echo 'Devolución registrada correctamente.';
 } else {
 
     echo 'El número de pedido no existe.';

@@ -2,82 +2,55 @@
     {
         "id": 1,
         "nombre": "Hamb1",
-        "precio": "1524",
+        "precio": "2000",
         "tipo": "simple",
         "aderezo": "mayonesa",
-        "cantidad": 10,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb1-simple.jpg"
+        "cantidad": 110,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb9-simple."
     },
     {
         "id": 2,
         "nombre": "Hamb2",
-        "precio": "3500",
-        "tipo": "simple",
-        "aderezo": "ketchup",
-        "cantidad": 7,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb2-doble.jpg"
+        "precio": "1500",
+        "tipo": "doble",
+        "aderezo": "mayonesa",
+        "cantidad": 59,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb9-doble.jpg"
     },
     {
         "id": 3,
         "nombre": "Hamb3",
-        "precio": "4500",
-        "tipo": "doble",
-        "aderezo": "mostaza",
-        "cantidad": 10,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb3-doble.jpg"
+        "precio": "2000",
+        "tipo": "simple",
+        "aderezo": "mayonesa",
+        "cantidad": 30,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb3-simple.jpg"
     },
     {
         "id": 4,
         "nombre": "Hamb4",
-        "precio": "4500",
-        "tipo": "doble",
-        "aderezo": "mostaza",
-        "cantidad": 10,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb4-doble.jpg"
+        "precio": "2000",
+        "tipo": "simple",
+        "aderezo": "ketchup",
+        "cantidad": 38,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb4-simple.jpg"
     },
     {
         "id": 5,
         "nombre": "Hamb5",
-        "precio": "1500",
-        "tipo": "simple",
-        "aderezo": "mayonesa",
-        "cantidad": 2,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb5-simple.jpg"
+        "precio": "2000",
+        "tipo": "doble",
+        "aderezo": "ketchup",
+        "cantidad": "40",
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb5-doble.jpg"
     },
     {
         "id": 6,
-        "nombre": "Hamb8",
-        "precio": "2800",
+        "nombre": "Hamb6",
+        "precio": "3500",
         "tipo": "doble",
         "aderezo": "mayonesa",
-        "cantidad": 26,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb8-doble.jpg"
-    },
-    {
-        "id": 7,
-        "nombre": "Hamb8",
-        "precio": "2800",
-        "tipo": "simple",
-        "aderezo": "ketchup",
-        "cantidad": 0,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb8-simple.jpg"
-    },
-    {
-        "id": 8,
-        "nombre": "Hamb9",
-        "precio": "1500",
-        "tipo": "simple",
-        "aderezo": "ketchup",
-        "cantidad": 0,
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb9-simple.jpg"
-    },
-    {
-        "id": 9,
-        "nombre": "Hamb9",
-        "precio": "1500",
-        "tipo": "dobles",
-        "aderezo": "ketchup",
-        "cantidad": "20",
-        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb9-dobles.jpg"
+        "cantidad": 39,
+        "imagen": "ImagenesDeHamburguesas\/2023\/Hamb6-doble.jpg"
     }
 ]

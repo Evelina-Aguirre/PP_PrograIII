@@ -20,7 +20,7 @@ if (Busqueda::BuscarObjetoEnArray('numPedido', $numPedido, $arrayaux)) {
         $borrado = Venta::BorrarVenta($numPedido);
 
         if ($borrado) {
-            echo "La venta con número de pedido $numPedido ha sido borrada y la foto se ha movido a la carpeta /BACKUPVENTAS/2023.";
+            echo "La venta $numPedido ha sido borrada y la foto se ha movido a la carpeta /BACKUPVENTAS/2023.";
         } else {
             echo "No se encontró el Número de Pedido $numPedido";
         }

@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "32b0bb1f-147b-4e32-8095-81f735eed120",
+		"name": "PP_LABOIII",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26594059"
+	},
+	"item": [
+		{
+			"name": "CargarHamburguesa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Hamb6"
+						},
+						{
+							"key": "tipo",
+							"value": "doble"
+						},
+						{
+							"key": "precio",
+							"value": "3500"
+						},
+						{
+							"key": "aderezo",
+							"value": "mayonesa"
+						},
+						{
+							"key": "cantidad",
+							"value": "40"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/xampp/htdocs/PP_PrograIII/Hamburguesas/ImagenesDeHamburguesas/HamburguesaSimple.jpg"
+						},
+						{
+							"key": "accion",
+							"value": "HamburguesaCarga",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HamburguesaConsultar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "HamburguesaConsultar",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Hamb1",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "doble",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AltaVenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "AltaVenta",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ana@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "ana",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "simple",
+							"type": "text"
+						},
+						{
+							"key": "aderezo",
+							"value": "mayonesa",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "cupon",
+							"value": "648e06c2ddb4a",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasVentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "ConsultasVentas",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "2023-06-19",
+							"type": "text"
+						},
+						{
+							"key": "fechaInicio",
+							"value": "2023-06-10",
+							"type": "text"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2023-06-23",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "ana",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "simple",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasVentasPorFecha",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "ConsultasVentas",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "13-06-2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasVentasEntreFechas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "ConsultasVentas",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "13-06-2023",
+							"type": "text"
+						},
+						{
+							"key": "fechaInicio",
+							"value": "15-06-2023",
+							"type": "text"
+						},
+						{
+							"key": "fechaFin",
+							"value": "18-06-2023",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "pepa",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "simple",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarVenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numPedido\": 101,\r\n  \"email\": \"ejemplo@gmail.com\",\r\n  \"nombre\": \"Ejemplo\",\r\n  \"tipo\": \"Ejemplo\",\r\n  \"aderezo\": \"Ejemplo\",\r\n  \"cantidad\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultasDevoluciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php?consulta=devolucionesYCupones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "consulta",
+							"value": "devolucionesConCupones",
+							"disabled": true
+						},
+						{
+							"key": "consulta",
+							"value": "cupones",
+							"disabled": true
+						},
+						{
+							"key": "consulta",
+							"value": "devolucionesYCupones"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DevolverHamburguesa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "numPedido",
+							"value": "102",
+							"type": "text"
+						},
+						{
+							"key": "causaDevolucion",
+							"value": "Está frio",
+							"type": "text"
+						},
+						{
+							"key": "fotoClienteEnojado",
+							"type": "file",
+							"src": "/C:/xampp/htdocs/PP_PrograIII/Hamburguesas/ImagenesClientesEnojados/20232023ClientaEnojada4.jpg"
+						},
+						{
+							"key": "accion",
+							"value": "DevolverHamburguesa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrarVenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PP_PrograIII/Hamburguesas/index.php?numPedido=103",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PP_PrograIII",
+						"Hamburguesas",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "numPedido",
+							"value": "103"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

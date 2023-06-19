@@ -1,75 +1,50 @@
 [
     {
-        "codigo": "6487a49847772",
+        "codigo": "6490c76d1f555",
         "descuento": 0.1,
-        "vencimiento": "2023-06-16",
+        "vencimiento": "2023-06-22",
         "usado": false
     },
     {
-        "codigo": "648e068099fdd2",
+        "codigo": "6490c77d22028",
         "descuento": 0.1,
-        "vencimiento": "2023-06-18",
-        "usado": false
-    },
-    {
-        "codigo": "648e06c2ddb4a",
-        "descuento": 0.1,
-        "vencimiento": "2018-06-17",
-        "usado": false
-    },
-    {
-        "codigo": "648e08023e81a",
-        "descuento": 0.1,
-        "vencimiento": "2023-06-20",
-        "estado": "noUsado",
+        "vencimiento": "2023-06-22",
         "usado": true
     },
     {
-        "codigo": "648e08141aa5d",
+        "codigo": "6490c8294594c",
         "descuento": 0.1,
-        "vencimiento": "2023-06-20",
+        "vencimiento": "2023-06-22",
         "usado": false
     },
     {
-        "codigo": "648e083b852b3",
+        "codigo": "6490c86eeab55",
         "descuento": 0.1,
-        "vencimiento": "2023-06-20",
+        "vencimiento": "2023-06-22",
         "usado": false
     },
     {
-        "codigo": "648e086f342f9",
+        "codigo": "6490c878c478f",
         "descuento": 0.1,
-        "vencimiento": "2023-06-20",
+        "vencimiento": "2023-06-22",
         "usado": false
     },
     {
-        "codigo": "648e0aad15743",
+        "codigo": "6490c883038d4",
         "descuento": 0.1,
-        "vencimiento": "2023-06-20",
+        "vencimiento": "2023-06-22",
         "usado": false
     },
     {
-        "codigo": "648e0b878792e",
+        "codigo": "6490c88452522",
         "descuento": 0.1,
-        "vencimiento": "2023-06-20",
+        "vencimiento": "2023-06-22",
         "usado": false
     },
     {
-        "codigo": "648e0becb8bf9",
+        "codigo": "6490e03b834a8",
         "descuento": 0.1,
-        "vencimiento": "2023-06-20",
+        "vencimiento": "2023-06-23",
         "usado": false
-    },
-    {
-        "codigo": "648e0e55d4e71",
-        "descuento": 0.1,
-        "vencimiento": "2023-06-20",
-        "usado": false
-    },
-    {
-        "codigo": "648df5d295b25",
-        "descuento": 0.1,
-        "vencimiento": "2023-06-20",
-        "usado": true
     }
 ]

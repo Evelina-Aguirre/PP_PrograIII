@@ -22,12 +22,5 @@ if (isset($_POST['cupon'])) {
     $venta->CargarVenta($tipo, $aderezo, $cantidad);
 
 
-//print_r($venta->_cupon['descuento']);
-/*
-a- Debe recibir el cupón de descuento (si existe) y guardar el importe final y el descuento aplicado en el archivo.
-b- Validar que el cupón no se encuentre vencido
-c- Debe marcarse el cupón como ya usado*/
-
- 
 
 ?>

@@ -66,17 +66,13 @@ class Busqueda
         $fechas = array();
 
         while ($fechaInicio <= $fechaFin) {
-            $fechas[] = $fechaInicio->format('d-m-Y');
+            $fechas[] = $fechaInicio->format('Y-m-d');
             $fechaInicio->modify('+1 day');
         }
         return $fechas;
 
     }
 
-    /* public function ordenarPorNombre($venta1, $venta2)
-    {
-        return strcmp($venta1['nombreCliente'], $venta2['nombreCliente']);
-    }*/
 
     public static function filtrarYOrdenarVentas($arrayVentas, $fechaInicio, $fechaFin)
     {
