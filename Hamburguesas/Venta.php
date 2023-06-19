@@ -139,11 +139,6 @@ class Venta
         Archivos_Json::GuardarArrayJson(Venta::archivo, $arrayVentas);
     }
 
-    public function ModificarCuponVenta($cupon)
-    {
-        $this->_cupon = $cupon;
-    }
-
     public static function BorrarVenta($numPedido)
     {
         $arrayAux = Archivos_Json::LeerJson(Venta::archivo);

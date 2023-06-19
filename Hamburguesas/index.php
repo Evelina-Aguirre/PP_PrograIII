@@ -3,7 +3,8 @@
 switch ($_SERVER['REQUEST_METHOD']) {
 
     case "GET":
-
+        require_once 'ConsultarDevoluciones.php';
+        
         break;
     case "POST":
         $accion = $_POST['accion'];
@@ -41,8 +42,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
         break;
     case "DELETE":
         require_once 'BorrarVenta.php';
-        break;
-
+        break; 
+     
         default:
         echo "La acción a realizar no es válida";
 }

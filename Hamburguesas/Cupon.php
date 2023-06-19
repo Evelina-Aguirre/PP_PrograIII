@@ -70,7 +70,7 @@ class Cupon
         Archivos_Json::GuardarArrayJson('cupones.json', $cupones);
     }
 
-    
+
     public static function verificarCuponVencido($codigoCupon)
     {
         $rtn = false;
@@ -80,17 +80,23 @@ class Cupon
             $fechaActual = new DateTime();
             $fechaVencimiento = DateTime::createFromFormat('Y-m-d', $cuponEncontrado['vencimiento']);
 
-            $fechaActualStr = $fechaActual->format('Y-m-d'); 
-            
+            $fechaActualStr = $fechaActual->format('Y-m-d');
+
             if ($fechaActualStr > $fechaVencimiento->format('Y-m-d')) {
-                $rtn = true; 
+                $rtn = true;
             }
         }
-    
+
         return $rtn;
     }
-    
 
+    public static function ImprimirCupones()
+    {
+        $cupones = $cupones = Archivos_Json::LeerJson('cupones.json');
 
-
+        echo "Cupones y su estado:<br>";
+        foreach ($cupones as $cupon) {
+            echo "Cupón: " . $cupon['codigo'] . " - Estado: " . ($cupon['usado'] ? "Usado" : "No usado") . "<br>";
+        }
+    }
 }
